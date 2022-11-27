@@ -33,7 +33,7 @@ export class AwsJenkinsCdkStack extends cdk.Stack {
     // /Setup Access Point, which are application-specific entry points into an Amazon EFS file system 
     // that makes it easier to manage application access to shared datasets
     const accessPoint = fileSystem.addAccessPoint(`${appName}-ap`, {
-      path: '/${jenkinsHomeDir}',
+      path: `/${jenkinsHomeDir}`,
       posixUser: {
         uid: '1000',
         gid: '1000',
